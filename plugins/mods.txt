@@ -1,0 +1,12 @@
+# Download Plugins
+https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar
+https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar
+https://dev.bukkit.org/projects/grief-prevention/files/latest
+https://dev.bukkit.org/projects/betterjails/files/latest
+https://dev.bukkit.org/projects/mutemanager/files/latest
+https://dev.bukkit.org/projects/pvpmanager/files/latest
+https://dev.bukkit.org/projects/worldedit/files/latest
+https://dev.bukkit.org/projects/worldguard/files/latest
+https://dev.bukkit.org/projects/plugman/files/latest
+https://dev.bukkit.org/projects/multiverse-core/files/latest
+https://dev.bukkit.org/projects/multiverse-portals/files/latest

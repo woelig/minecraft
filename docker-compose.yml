@@ -1,0 +1,45 @@
+version: '3.3'
+services:
+    minecraft-server:
+        tty: true
+        stdin_open: true
+        restart: unless-stopped
+        volumes:
+            - './data:/data'
+            - './plugins:/plugins'
+        entrypoint: /bin/bash -c "/bin/bash -c \"$${@}\""
+        command: |
+            /bin/bash -c "
+            set -e
+            touch /data/plugins/mods.txt
+            rm -f /data/plugins/*[a-z]*.jar
+            /start
+            "
+        environment:
+            - MEMORY=14G
+#            - TYPE=PAPER
+            - TYPE=SPIGOT
+            - EULA=TRUE
+            - 'MODS_FILE=/plugins/mods.txt'
+            - 'SPIGET_RESOURCES=1997,34315,64139,8631,18494,71266,28140,29595,74304'
+        ports:
+            - '25575:25575'
+            - '25575:25575/udp'
+            - '19132:19132'
+            - '19132:19132/udp'
+            - '25565:25565'
+        container_name: mc
+        image: itzg/minecraft-server
+
+#SPIGET_RESOURCES NOTES:
+# https://www.spigotmc.org/resources/protocollib.1997/
+# https://www.spigotmc.org/resources/vault.34315/
+# https://www.spigotmc.org/resources/advancedteleport.64139/
+# https://www.spigotmc.org/resources/coreprotect.8631/
+# https://www.spigotmc.org/resources/discordsrv.18494/
+# https://www.spigotmc.org/resources/infinite-announcements.71266/
+# https://www.spigotmc.org/resources/luckperms.28140/
+# https://www.spigotmc.org/resources/warps-portals-and-more-warp-teleport-system-1-8-1-18.29595/
+# https://www.spigotmc.org/resources/dynamic-difficulty.92025/
+# https://www.spigotmc.org/resources/levelledmobs.74304/
+# https://www.spigotmc.org/resources/magic.1056/
